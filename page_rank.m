@@ -1,18 +1,20 @@
 function r = page_rank(A)
 
-%temp
-A = eye(3);
 
-N = size(A,1);
+n = size(A,1);
 d = 0.85;
 
-arbitrary_side = ones(N, 1);
-arbitrary_side = arbitrary_side * ((1-d) / N);
+r = rand(n,1);
 
-navigation_side = 0;
+first_part = ones(n, 1);
+first_part = first_part * (1-d);
+% dividir por n??
+%first_part = first_part * ((1-d)/ n); 
 
-
-r = [0;0;0;0];
+for i = 1:52
+  second_part = d * (A * r);
+  r = first_part + second_part;
+end
 
 
 end

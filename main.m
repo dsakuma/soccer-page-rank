@@ -1,6 +1,12 @@
 fprintf('Inicio script\n')
 
-p = page_rank(0);
+A = [0, 0, 1/1, 0;
+       1/2, 0, 0, 0;
+       1/2, 1/1, 0, 1/1;
+       0, 0, 0, 0];
+
+
+p = page_rank(A);
 p
 
 
