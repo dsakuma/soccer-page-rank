@@ -1,7 +1,7 @@
-function r = page_rank(A)
+function r = page_rank(F)
 
 
-n = size(A,1);
+n = size(F,1);
 d = 0.85;
 
 r = rand(n,1);
@@ -12,7 +12,7 @@ first_part = first_part * (1-d);
 %first_part = first_part * ((1-d)/ n); 
 
 for i = 1:52
-  second_part = d * (A * r);
+  second_part = d * (F * r);
   r = first_part + second_part;
 end
 
