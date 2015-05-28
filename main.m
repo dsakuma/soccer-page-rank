@@ -4,7 +4,7 @@ fprintf('Inicio script\n')
 
 pr = page_rank(F);
 
-for i = 1:4 
+for i = 1:size(p)
   result.(p{i}(1:end)) = pr(i);
 endfor
 
