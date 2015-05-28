@@ -11,7 +11,7 @@ first_part = first_part * (1-d);
 % dividir por n??
 %first_part = first_part * ((1-d)/ n); 
 
-for i = 1:52
+for i = 1:100
   second_part = d * (F * r);
   r = first_part + second_part;
 end
