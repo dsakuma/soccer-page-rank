@@ -16,7 +16,25 @@ function [F, p] = adjacency()
 
 [c1, c2, c3, c4] = textread("data_example.csv", '%s %s %d %d', 'delimiter', ',');
 
-p = {"\"Paulo\""; "\"Sakuma\""; "\"Hugo\""; "\"Nakamashi\""; "\"Chagas\""};
+
+% Gerando cell de jogadores
+players = [c1;c2];
+p = {};
+index = 1;
+for i = 1:size(players,1);
+  player = players{i};
+  pos = find(ismember(p, player));
+
+  if (size(pos, 1) == 0)
+    p{index, 1} = player;
+    index = index + 1;
+  endif
+endfor
+
+%regexptranslate ("escape", c1{1})
+%p = {"\"Paulo\""; "\"Sakuma\""; "\"Hugo\""; "\"Nakamashi\""; "\"Chagas\""};
+
+
 m = size(c1,1);
 n = size(p,1);
 G = zeros(n);
