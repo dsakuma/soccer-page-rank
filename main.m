@@ -4,9 +4,19 @@ fprintf('Inicio script\n')
 
 pr = page_rank(F);
 
-for i = 1:size(p)
-  result.(p{i}(1:end)) = pr(i);
-endfor
+[pr_sort, pr_index] = sort(pr, "descend");
+
+
+sorted_p = p(pr_index);
+
+i = 1;
+for i = 1:size(sorted_p)
+  result.(sorted_p{i}(1:end)) = pr_sort(i);
+end
+
+% for i = 1:size(p)
+%   result.(p{i}(1:end)) = pr(i);
+% endfor
 
 result
 

@@ -1,4 +1,3 @@
-"Paulo", "Sakuma", 1, 0
-"Hugo", "Nakamashi", 1, 0
-"Chagas", "Nakamashi", 1, 0
-"Chagas", "Sakuma", 0, 1
+"Hugo", "Sakuma", 1, 0
+"Sakuma", "Paulo", 1, 0
+"Paulo", "Hugo", 1, 0
