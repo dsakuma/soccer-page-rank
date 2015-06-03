@@ -1,3 +1,7 @@
+%========== Inicializacao
+clear ; close all; clc
+
+
 fprintf('Inicio script\n')
 
 [F, p] = adjacency();
